@@ -1,0 +1,105 @@
+.slider{
+    height: 20vh;   
+    width: 100vw;
+}
+
+.slidetrack,.slidetrackRev{
+    height: 50vh;
+    margin: 2rem;
+}
+
+.partnerHeading{
+    color: var(--beige);
+    font-size: 5rem;
+    margin: 2rem 1rem;
+}
+
+.mainContainer .container img {
+    height: 90px;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (max-width:650px) {
+    .partnerHeading{
+        color: var(--beige);
+        font-size: 3rem;
+        margin: 2rem 1rem;
+    }
+}
+
+
+.floatingText{
+    height: 40vh;
+    width: 100vw;
+}
+
+.floatingText h1{
+    color: var(--beige);
+    text-align: center;
+    font-size: 6vw;
+}
+
+.screen{
+    width: 100vw;
+    height: 200vh;
+    padding-bottom: 60px;
+}
+
+.textBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 0rem;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.textBox h1{
+    font-size: 5vw;
+    color: var(--beige);
+}
+
+.buttonBox{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 100%;
+}
+
+.buttonBox button{
+    width: 350px;
+    height: 40px;
+    color: var(--beige);
+    border: 3px solid var(--beige);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.buttonBox button:hover{
+    transition: 0.5s;
+    transform: scale(1.01);
+    background-color: var(--beige);
+    color: white;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+}

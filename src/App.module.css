@@ -1,0 +1,12 @@
+.App{
+    width: 100vw;
+    height: 100vh;
+    background: white;
+}
+
+.section{
+    scroll-snap-align: start;
+}
+
+
+  

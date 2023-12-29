@@ -1,0 +1,111 @@
+body {
+  align-items: center;
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin white-gradient {
+  background: transparent;
+}
+
+$animationSpeed: 10s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@media (max-width: 650px) {
+  .slider{
+    background: transparent;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 80vh;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@keyframes scrollRev {
+  0% {
+    transform: translateX(calc(-250px * 7));
+    -webkit-transform: translateX(calc(-250px * 7));
+    -moz-transform: translateX(calc(-250px * 7));
+    -ms-transform: translateX(calc(-250px * 7));
+    -o-transform: translateX(calc(-250px * 7));
+  }
+  100% {
+    transform: translateX(calc(0));
+    -webkit-transform: translateX(calc(0));
+    -moz-transform: translateX(calc(0));
+    -ms-transform: translateX(calc(0));
+    -o-transform: translateX(calc(0));
+  }
+}
+
+// Styling
+.slider {
+  background: transparent;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 80vh;
+  margin: 0 0 5rem 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    @include white-gradient;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slidetrack {
+    height: 30vh;
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(250px * 20);
+  }
+
+  .slidetrackRev {
+    height: 20vh;
+    animation: scrollRev $animationSpeed linear infinite;
+    display: flex;
+    width: calc(250px * 20);
+    -webkit-animation: scrollRev $animationSpeed linear infinite;
+  }
+
+  .slide {
+    height: 100px;
+    width: 250px;
+  }
+}

@@ -1,0 +1,148 @@
+@font-face {
+    font-family: mixta;
+    src: url(../fontfamily/Fontspring-DEMO-mixtaessdidone-regular.otf);
+}
+@keyframes appear {
+    0%{
+        opacity: 0;
+        font-size: 18px;
+    }
+    100%{
+        opacity: 1;
+        font-size: 100px;
+    }
+}
+
+.screen{
+    background: radial-gradient(black,rgba(0, 0, 0, 0));
+    background-size: cover;
+    width: 100vw;
+    height: 800vh;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.slider{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display{
+    overflow: hidden;
+    padding: 5rem 0rem 0rem 0rem;
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    align-content: center;
+    justify-self: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.title{
+    margin: 3rem;
+    color: var(--beige);
+    font-family: var(--founders);
+    text-align: center;
+    font-size: 6vw;
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.display p{
+    color: white;
+    padding-left: 20%;
+    padding-bottom: 30px;
+    text-align: left;
+}
+
+@media screen and (max-width:1500px) {
+    .display p {
+        color: rgb(255, 255, 255);
+        text-align: left;
+        font-size: 4vw;
+        padding: 0.6rem 0rem;
+        width: calc(100% - 6rem);
+    }
+    .title{
+        font-family: var(--mixta);
+        color: var(--beige);
+        text-align: left;
+        font-size: 6vw;
+    }
+    .textContainer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .screen{
+        background: black;
+        width: 100vw;
+        height: 450vh;
+    }
+    
+    .sticky{
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .slider{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .display{
+        padding: 5rem 0rem;
+        position: absolute;
+        flex-direction: column;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .content{
+        transition: 1s;
+        animation-name: appear;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+    }
+    
+    
+    
+    .serviceBox{
+        width: 100%;
+        display: contents;  
+        padding: 1rem 2rem;
+        text-align: left;
+        font-size: 24px;
+        color: white;
+    }
+}

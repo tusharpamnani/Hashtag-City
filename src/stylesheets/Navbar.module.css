@@ -1,0 +1,184 @@
+.menuButton {
+    z-index: 20;
+    height: 40px;
+    aspect-ratio: 1;
+    /* border: 3px solid black; */
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(100vh);
+        -webkit-transform: translateY(100vh);
+        -moz-transform: translateY(100vh);
+        -ms-transform: translateY(100vh);
+        -o-transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+    }
+}
+
+.menuButton hr {
+    transition: 0.5s;
+    width: 45px;
+    border-radius: 20px;
+    height: 3px;
+    margin: 1px;
+    color: var(--beige);
+    background: black;
+    border: 1px solid var(--beige);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.none {
+    display: none;
+}
+
+.cross hr:nth-child(1) {
+    transition: 0.5s;
+    rotate: 45deg;
+    transform: translate(9%, 55%);
+    -webkit-transform: translate;
+    -ms-transform: translateX(20%);
+    -o-transform: translateX(20%);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.cross hr:nth-child(2) {
+    transition: 0.5s;
+    rotate: -45deg;
+    transform: translate(10%, 10%);
+    -webkit-transform: translate(3%, -43%);
+    -moz-transform: translate(10%, 10%);
+    -ms-transform: translate(10%, 10%);
+    -o-transform: translate(10%, 10%);
+}
+
+.cross hr:nth-child(3) {
+    display: none;
+}
+
+.logo {
+    transition: 2s;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20rem;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+    -ms-transition: 2s;
+    -o-transition: 2s;
+}
+
+.body {
+    z-index: 20;
+    padding: 0rem 5rem;
+    width: 100%;
+    position: fixed;
+    top: 2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.navContainer {
+    position: fixed;
+    animation: appear 0.5s;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    -webkit-animation: appear 0.5s;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navContainer h1 {
+    color: black;
+    font-size: 4vw;
+    z-index: 4;
+}
+
+@media screen and (max-width:650px) {
+    .body {
+        z-index: 20;
+        padding: 0rem 0rem;
+        width: 100%;
+        position: fixed;
+        top: 1rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .logo {
+        transition: 1s;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 20rem;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+    }
+
+    .menuButton {
+        z-index: 20;
+        height: 40px;
+        aspect-ratio: 1;
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+    .navContainer h1 {
+        color: black;
+        font-size: 10vw;
+        z-index: 4;
+    }
+}
